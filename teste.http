@@ -1,0 +1,215 @@
+### Cadastro de Funcionario
+POST http://localhost:3000/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Larissa",
+    "email": "larissa@gmail.com",
+    "senha": "123"
+}
+
+### Cadastro de Funcionario
+POST http://localhost:3000/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Ueslei",
+    "email": "ueslei@gmail.com",
+    "senha": "123"
+}
+
+### Cadastro de Funcionario
+POST http://localhost:3000/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Marcos",
+    "email": "marcos@gmail.com",
+    "senha": "123"
+}
+
+### Cadastro de Funcionario
+# @name LogReq
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "marcos@gmail.com",
+    "senha": "123"
+}
+
+### Cadastro de Funcionario
+# @name LogReq
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "larissa@gmail.com",
+    "senha": "123"
+}
+
+
+### Cadastro de Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "nome": "Eliel",
+    "cpf": "12345678912",
+    "telefone": "4812345678"
+}
+
+### Cadastro de Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "nome": "Mario",
+    "cpf": "12345678914",
+    "telefone": "4812345679"
+}
+
+### Cadastro de Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "nome": "Lucas",
+    "cpf": "12345678913",
+    "telefone": "4812345677"
+}
+
+### Listar de Cliente
+GET http://localhost:3000/clientes
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+### Consultar Cliente por Código
+GET http://localhost:3000/cliente/3
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+### Consultar Cliente por Nome
+GET http://localhost:3000/cliente/Eliel
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+### Atualizar de Cliente
+PUT  http://localhost:3000/cliente/id
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "nome": "Lucas",
+    "cpf": "12345678915",
+    "telefone": "4812345677"
+}
+
+### Atualizar Cliente
+DELETE   http://localhost:3000/cliente/id
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+### Cadastro do Equipamento
+POST   http://localhost:3000/equipamento
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idCliente": 1,
+    "modelo": "aaa",
+    "fabricante": "bbb",
+    "numSerie": "123456"
+}
+
+### Cadastro do Equipamento
+POST   http://localhost:3000/equipamento
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idCliente": 2,
+    "modelo": "bbb",
+    "fabricante": "aaa",
+    "numSerie": "456789"
+}
+
+### Cadastro do Equipamento
+POST   http://localhost:3000/equipamento
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idCliente": 1,
+    "modelo": "rrr",
+    "fabricante": "zzz",
+    "numSerie": "456123"
+}
+
+### Atualização do Equipamento
+POST   http://localhost:3000/equipamento/id
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idCliente": 1,
+    "modelo": "hhhh",
+    "fabricante": "zzz",
+    "numSerir": "456123"
+}
+
+### Cadastro da Inspeção
+POST   http://localhost:3000/inspecao
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idEquipamento": 1,
+    "status": "PENDENTE",
+    "data": "12/11",
+    "hora": "09:19"
+}
+
+### Cadastro da Inspeção
+POST   http://localhost:3000/inspecao
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idEquipamento": 1,
+    "status": "PENDENTE",
+    "data": "12/11",
+    "hora": "09:19"
+}
+
+### Cadastro da Inspeção
+POST   http://localhost:3000/inspecao
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idEquipamento": 2,
+    "status": "PENDENTE",
+    "data": "11/11",
+    "hora": "09:30"
+}
+
+### Cadastro da Inspeção
+POST   http://localhost:3000/inspecao
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
+
+{
+    "idEquipamento": 1,
+    "status": "REALIZADA",
+    "data": "10/11",
+    "hora": "09:45"
+}
+
+### Listamento da Inspeção
+POST   http://localhost:3000/inspecoes
+Content-Type: application/json
+Authorization: {{LogReq.request.body.token}}
